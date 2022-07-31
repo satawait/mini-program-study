@@ -1,0 +1,27 @@
+<!--pages/list/list.wxml-->
+<view class="container-list">
+  <view class="box">A</view>
+  <view class="box">B</view>
+  <view class="box">C</view>
+</view>
+<scroll-view class="container-scroll" scroll-y>
+  <view class="box">A</view>
+  <view class="box">B</view>
+  <view class="box">C</view>
+</scroll-view>
+<swiper class="container-swiper" indicator-dots="true" indicator-color="#fff" indicator-active-color="#222" autoplay="true" interval="1000" circular="true">
+  <swiper-item class="swiper-item">
+    <view class="box">A</view>
+  </swiper-item>
+  <swiper-item class="swiper-item">
+    <view class="box">B</view>
+  </swiper-item>
+  <swiper-item class="swiper-item">
+    <view class="box">C</view>
+  </swiper-item>
+</swiper>
+<view>
+  长按复制号码
+  <text user-select="true">122233344444</text>
+</view>
+<rich-text nodes="<h1 style='color: red'>标题</h1>"></rich-text>
