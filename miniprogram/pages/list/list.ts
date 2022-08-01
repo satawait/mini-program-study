@@ -16,7 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    this.login()
+    // this.login()
   },
 
   /**
@@ -118,6 +118,16 @@ Page({
       success: res => {
         console.log(res)
       }
+    })
+  },
+  gotoIndex() {
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
+  },
+  gotoInfo() {
+    wx.navigateTo({
+      url: '/pages/info/info?name=zs&age=20'
     })
   }
 })

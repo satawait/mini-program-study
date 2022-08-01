@@ -43,3 +43,8 @@
 </view>
 <button type="primary" size="mini" bindtap="getInfo">get请求</button>
 <button type="primary" size="mini" bindtap="postInfo">post请求</button>
+<navigator url="/pages/index/index" open-type="switchTab">导航</navigator>
+<navigator url="/pages/info/info?name=zs&age=20" open-type="navigate">导航到info</navigator>
+<navigator url="/pages/message/message?name=zs&age=20" open-type="navigate">导航到message</navigator>
+<button bindtap="gotoIndex">跳到index</button>
+<button bindtap="gotoInfo">跳转到info</button>

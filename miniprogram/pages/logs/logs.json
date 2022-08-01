@@ -1,7 +1,5 @@
 {
   "navigationBarTitleText": "本地生活",
   "usingComponents": {},
-  "enablePullDownRefresh": true,
-  "onReachBottomDistance": 50,
   "navigationBarBackgroundColor": "#cf5500"
 }

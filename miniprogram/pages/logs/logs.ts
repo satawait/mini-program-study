@@ -4,8 +4,8 @@ import { formatTime } from '../../utils/util'
 Page({
   data: {
     logs: [],
-    swiperList: <object>[],
-    gridList: <object>[]
+    swiperList: [] as object[],
+    gridList: [] as object[]
   },
   onLoad() {
     this.getSwiperList()

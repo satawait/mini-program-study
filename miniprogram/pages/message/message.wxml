@@ -1,0 +1,7 @@
+<!--pages/message/message.wxml-->
+<!-- <text>pages/message/message.wxml</text>
+<view>{{ count }}</view>
+<view class="tall-view"></view> -->
+<view class="color-item" wx:for="{{ colorList }}" wx:key="index" style="background-color: rgba({{ item }});">
+  <text>{{ item }}</text>
+</view>
