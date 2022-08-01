@@ -20,8 +20,26 @@
     <view class="box">C</view>
   </swiper-item>
 </swiper>
-<view>
+<view class="color-red">
   长按复制号码
   <text user-select="true">122233344444</text>
 </view>
 <rich-text nodes="<h1 style='color: red'>标题</h1>"></rich-text>
+<button type="primary" bindtap="btnHandler">登录</button>
+<button type="warn" size="mini">警告</button>
+<button plain="true" bindtap="countChange" data-num="{{ 100 }}">镂空</button>
+<image class="img" src="{{ imgSrc }}" mode="widthFix"></image>
+<text>{{ info }}</text>
+<text>{{ count }}</text>
+<text>{{ inputValue }}</text>
+<input type="text" bindinput="inputHandler" value="{{ inputValue }}"/>
+<view>
+  <text wx:if="{{ count >= 300 }}">大于300了</text>
+  <text wx:elif="{{ count <200 }}">小于300了</text>
+</view>
+<view hidden="true">隐藏了</view>
+<view>
+  <text wx:for="{{ dataList }}" wx:for-index="idx" wx:for-item="dataItem" wx:key="idx">{{ dataItem }}</text>
+</view>
+<button type="primary" size="mini" bindtap="getInfo">get请求</button>
+<button type="primary" size="mini" bindtap="postInfo">post请求</button>
