@@ -1,0 +1,9 @@
+<!--components/test/test.wxml-->
+<view>
+  <text class="color-blue">{{ countObject.count }}</text>
+  <button bindtap="tapHandler">加一</button>
+  <button bindtap="changeMaxCount">改变maxCount</button>
+  <slot name="before"></slot>
+  <slot name="after"></slot>
+  <text>{{ gender }}</text>
+</view>

@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    maxCount: 12,
     query: {}
   },
 
@@ -69,5 +70,15 @@ Page({
     wx.navigateBack({
       delta: 1
     })
+  },
+  changeMaxCount() {
+    this.setData({
+      maxCount: this.data.maxCount + 1
+    })
+  },
+  getComInstance() {
+    const test = this.selectComponent('#test')
+    console.log(test.changeMaxCount)
+    test.changeMaxCount()
   }
 })

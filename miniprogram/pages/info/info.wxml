@@ -2,3 +2,8 @@
 <text>pages/info/info.wxml</text>
 <navigator open-type="navigateBack" delta="1">后退</navigator>
 <button bindtap="goBack">后退</button>
+<test max="{{ maxCount }}" bind:changeMaxCount="changeMaxCount"- id="test">
+  <text slot="before">slot before填充</text>
+  <text slot="after">slot after填充</text>
+</test>
+<button bindtap="getComInstance">获取子组件实例</button>

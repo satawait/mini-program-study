@@ -18,6 +18,12 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto">{{tools.toLower(motto)}}</text>
   </view>
 </view>
+<wxs src="/utils/tools.wxs" module="tools"></wxs>
+<wxs module="moduleIndex">
+  module.exports.toUpper = function(str) {
+    return str.toUpperCase()
+  }
+</wxs>
