@@ -7,6 +7,31 @@
     "pages/message/message",
     "pages/shopList/shopList"
   ],
+  "subPackages": [
+    {
+      "root": "packageA",
+      "name": "pkgA",
+      "pages": [
+        "pages/cat/cat",
+        "pages/dog/dog"
+      ]
+    },
+    {
+      "root": "packageB",
+      "name": "pkgB",
+      "pages": [
+        "pages/apple/apple",
+        "pages/banana/banana"
+      ],
+      "independent": true
+    }
+  ],
+  "preloadRule": {
+    "pages/info/info": {
+      "packages": ["pkgA"],
+      "network": "all"
+    }
+  },
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
@@ -15,6 +40,7 @@
     "backgroundColor": "#efefef"
   },
   "tabBar": {
+    "custom": true,
     "list":[{
       "pagePath": "pages/list/list",
       "text": "list",
@@ -34,7 +60,9 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "v-button": "@vant/weapp/button"
+    "v-button": "@vant/weapp/button",
+    "v-tabbar": "@vant/weapp/tabbar/index",
+    "v-tabbar-item": "@vant/weapp/tabbar-item/index"
   },
   "lazyCodeLoading": "requiredComponents"
 }
