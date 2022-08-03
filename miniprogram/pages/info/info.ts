@@ -1,4 +1,6 @@
 // pages/info/info.ts
+import { createStoreBindings } from 'mobx-miniprogram-bindings'
+import { userInfo } from '../../store/store'
 Page({
 
   /**
@@ -12,7 +14,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
+  onLoad(options: Record<string, any>) {
+    this.storeBindings = createStoreBindings(this, {
+      store: userInfo,
+      fields: ['name', 'getUserName'],
+      actions: ['updateUserName']
+    })
     this.setData({
       query: options
     })
@@ -43,7 +50,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-
+    this.storeBindings.destroyStoreBindings()
   },
 
   /**
@@ -77,8 +84,13 @@ Page({
     })
   },
   getComInstance() {
+    // wx.chooseMedia({
+    //   mediaType: ['image']
+    // }).then(res => console.log('res: ', res))
     const test = this.selectComponent('#test')
-    console.log(test.changeMaxCount)
     test.changeMaxCount()
+  },
+  updateNewUserName() {
+    this.updateUserName('new')
   }
 })

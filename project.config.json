@@ -16,7 +16,17 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./miniprogram"
+      }
+    ],
+    "minified": true,
+    "es6": true,
+    "enhance": true
   },
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},

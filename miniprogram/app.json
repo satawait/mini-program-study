@@ -32,6 +32,9 @@
       "selectedIconPath": "/assets/imgs/tabs/contact-active.png"
     }]
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "v-button": "@vant/weapp/button"
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

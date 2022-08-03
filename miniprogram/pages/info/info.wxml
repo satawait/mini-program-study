@@ -7,3 +7,6 @@
   <text slot="after">slot after填充</text>
 </test>
 <button bindtap="getComInstance">获取子组件实例</button>
+<v-button type="primary">按钮</v-button>
+<v-button type="danger" bindtap="updateNewUserName">按钮</v-button>
+<text>{{ name }}</text>

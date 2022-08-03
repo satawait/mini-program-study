@@ -1,7 +1,16 @@
 // components/test/test.ts
+import { ComponentWithStore } from "mobx-miniprogram-bindings";
+import { userInfo } from '../../store/store'
 const myBehaviors = require('../../behaviors/behaviors')
-Component({
+ComponentWithStore({
   behaviors: [myBehaviors],
+  storeBindings: {
+    store: userInfo,
+    fields: ['name'],
+    actions: {
+      updateUserName: 'updateUserName'
+    }
+  },
   options: {
     multipleSlots: true, // 启用多个插槽
     pureDataPattern: /^_/ // 定义纯数据字段
@@ -74,6 +83,9 @@ Component({
     },
     changeMaxCount() {
       this.triggerEvent('changeMaxCount')
+    },
+    updateNewUserName() {
+      this.updateUserName('new')
     }
   }
 })

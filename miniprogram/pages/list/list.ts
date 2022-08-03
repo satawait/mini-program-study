@@ -6,7 +6,7 @@ Page({
    */
   data: {
     info: 'hello world',
-    imgSrc: '/assets/imgs/微信截图_20220724232745.png',
+    imgSrc: '/assets/imgs/link-01.png',
     count: 0,
     inputValue: '123',
     dataList: [1, 2, 3, 4]

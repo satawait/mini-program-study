@@ -6,4 +6,6 @@
   <slot name="before"></slot>
   <slot name="after"></slot>
   <text>{{ gender }}</text>
+  <text>{{ name }}</text>
+  <v-button bindtap="updateNewUserName">修改</v-button>
 </view>
